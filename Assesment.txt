@@ -1,0 +1,46 @@
+Coding Challenge
+What are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+1. Authenticity and Authority:
+JWT (JSON Web Token): Use token-based authentication to ensure that only authorized users can access your API.
+OAuth: If the API is public, consider OAuth for third-party access control.
+
+2. HTTPS (Secure Transfer Protocol): .
+Always use HTTPS to secure connections between clients and servers, ensure data privacy, and prevent middleman attacks.
+
+3. Error handling:
+Make sure your API handles errors nicely without leaking important information. Provide reasonable error messages (e.g., 400 bad request, 404 not found)
+
+
+
+Theoretical Challenge
+1. How to solve the challenge
+
+To solve this challenge , you can break down the problem into the following steps.
+
+Step 1: Examine the CSV Input
+First, read the CSV file, analyze its contents, and consider each cell as a value or a formula.
+To merge, split each line based on a comma or other delimiter in the CSV file.
+Step 2: Check each cell
+If a cell contains a value (integer or string), store the value directly.
+If a cell contains a formula, examine the formula and evaluate it in terms of other cells (such as A1 and B2). You can use a recursive or recursive method to edit these expressions.
+Step 3: Use Formula Parser
+Use the map to store cell references (e.g., A1, B2, etc.) as keys and store their values as values in the map.
+For cells containing formulas, you can divide the formula by operators (such as +, -, *, /) to retrieve the values of the underlined cells from the map.
+Step 4: Output the Results
+Once each cell has been evaluated, write the results to a new CSV file.
+
+
+2. Errors to Check For
+Circular References: Two or extra cells reference every different in a cycle (e.g., A1 = B1 + 1 and B1 = A1 +1). You ought to discover such cycles and keep away from limitless recursion or generation.
+Invalid Formulas: Ensure that formulas are valid (e.g., syntax mistakes, unknown operators, or references to non-existent cells).
+Division by means of Zero: Handle cases in which a formulation tries to divide by way of zero.
+Missing Cell Values: Handle instances in which a method references a cellular that hasn't been initialized or is out of range.
+Non-numeric Values: If a mobile consists of text or an unsupported layout, cope with the error gracefully (e.G., by using skipping the cell or logging the error).
+
+
+
+3. How Might a User Break Your Code?
+Invalid Input Format: If the CSV incorporates unexpected codecs (e.G., incorrect delimiters, missing values, or non-preferred syntax in formulas), it can ruin the parsing good judgment.
+Circular References: As referred to earlier, users could introduce round references that could reason infinite loops or stack overflows in recursive assessment.
+Large Formulas: Formulas with deeply nested dependencies would possibly lead to stack overflows or overall performance issues.
